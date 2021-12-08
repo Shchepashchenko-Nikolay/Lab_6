@@ -1,0 +1,24 @@
+.model small
+.stack 100h
+.data
+a db 10
+b db 1
+c dv 30
+d db 2
+
+mov ax, @data
+mov ds, ax
+
+mov al, a
+mov dl, b
+mul dl;
+mov bx, c
+div bx
+mov dx, d
+add ah, dx
+sub dest, sp
+neg dest
+
+mov ah, 4ch
+int 21h
+end
