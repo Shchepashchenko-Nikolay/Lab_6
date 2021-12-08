@@ -103,15 +103,15 @@ window.configure(background="black")
 frame = Frame(window, bg='black')
 
 background_image = tk.PhotoImage(file="sky.png")
-title = Label(window, image=background_image, bd=0)
+title = Label(window, image=background_image,highlightthickness=0, bd=0)
 title.pack()
 
 
 
 
-loadimage = tk.PhotoImage(file="89146_sun_icon.png")
+loadimage = tk.PhotoImage(file="4OKd.gif")
 loadimage2 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage3 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
+loadimage3 = tk.PhotoImage(file="4OKd.gif")
 loadimage4 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 loadimage5 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 loadimage6 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
@@ -122,20 +122,37 @@ loadimage10 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 
 
 
+#window.overrideredirect(True)
+#window.geometry("+250+250")
+#window.wm_attributes("-topmost", True)
+#window.wm_attributes("-disabled", True)
+window.wm_attributes("-transparentcolor", "white") # -- фон_белый
+
+
 
 sunbtn =Button(window,
-               image=loadimage,
-               command=createsunWindow)
+                   image=loadimage,
+#width=25, размеры планеты
+                   command=createearthWindow,bg = "white",
+                   borderwidth=0,bd=0)
 mercurybtn=Button(window,
                    image=loadimage2,
                    command=createmercuryWindow)
 
 venusbtn=Button(window,
+               image=loadimage2,
+               highlightthickness=0,
+               bd=0,
+               command=createsunWindow)
+
+
+earthbtn=tk.Button(window,
                    image=loadimage2,
-                   command=createvenusWindow)
-earthbtn=Button(window,
-                   image=loadimage2,
-                   command=createearthWindow)
+#width=25, размеры планеты
+                   command=createearthWindow,bg = "white",
+                   borderwidth=0,bd=0)
+
+
 marsbtn=Button(window,
                    image=loadimage2,
                    command=createmarscWindow)
