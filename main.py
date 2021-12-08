@@ -81,10 +81,8 @@ def createplutoWindow():
 
 
 window = Tk()  # создание окна
-#photo = tk.PhotoImage(file="zvezdnoe_nebo_noch_temnyj_152039_3840x2160.png")
- #photo = tk.PhotoImage(file = "zvezdnoe_nebo_noch_temnyj_152039_3840x2160.jpg")
 
-window['bg'] = 'black'  # типо фон черный
+#window['bg'] = 'black'  # типо фон черный
 
 window.title('lab6')  # name of programm
 # Указываем размеры окна
@@ -97,10 +95,15 @@ window.resizable(width=False, height=False)
 
 # Создаем фрейм (область для размещения других объектов)
 # Указываем к какому окну он принадлежит, какой у него фон и какая обводка
-frame = Frame(window, bg='black')
+#frame = Frame(window, bg='black')
 #frame.place(relx=0.1, rely=0.21, relwidth=0.2, relheight=0.1)
 
-title = Label(frame)
+
+window.configure(background="black")
+frame = Frame(window, bg='black')
+
+background_image = tk.PhotoImage(file="sky.png")
+title = Label(window, image=background_image, bd=0)
 title.pack()
 
 
