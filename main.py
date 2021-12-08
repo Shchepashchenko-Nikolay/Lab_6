@@ -81,7 +81,7 @@ def createplutoWindow():
 
 
 window = Tk()  # создание окна
-photo = tk.PhotoImage(file="zvezdnoe_nebo_noch_temnyj_152039_3840x2160.png")
+#photo = tk.PhotoImage(file="zvezdnoe_nebo_noch_temnyj_152039_3840x2160.png")
  #photo = tk.PhotoImage(file = "zvezdnoe_nebo_noch_temnyj_152039_3840x2160.jpg")
 
 window['bg'] = 'black'  # типо фон черный
