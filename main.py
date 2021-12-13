@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+
+
+from math import cos, sin, radians
+
 from tkinter import *
 import tkinter as tk
 
@@ -76,6 +82,46 @@ def createplutoWindow():
 
     labelExample2.pack()
 
+def cat():
+    i = 0 #именно она движет
+    ii =0
+    x=0
+    angle = 0
+
+    while True:
+        if angle >= 360:
+            angle = 0
+        i = 200 * cos(radians(angle))
+        ii = 200 * sin(radians(angle))
+        angle += 1
+
+
+     #   i = math.cosh(x)
+     #   ii =math.sinh(x)
+
+        print(i, ii)
+        sunbtn.place(x=i+350, y=ii+350)
+        mercurybtn.place(x=500, y=350)
+
+        venusbtn.place(x=450, y=350)
+        earthbtn.place(x=400, y=350)
+
+
+        marsbtn.place(x=350, y=350)
+        jupiterbtn.place(x=300, y=350)
+
+        saturnbtn.place(x=250, y=350)
+        uranusbtn.place(x=200, y=350)
+
+        neptunebtn.place(x=150, y=350)
+        plutobtn.place(x=100, y=350)
+        window.update()
+
+
+def die(): #она обновляет кооординаты , это mainloop()/ ее замена
+    while True:
+        cat()
+        window.update()
 
 
 
@@ -99,18 +145,24 @@ window.resizable(width=False, height=False)
 #frame.place(relx=0.1, rely=0.21, relwidth=0.2, relheight=0.1)
 
 
-window.configure(background="black")
-frame = Frame(window, bg='black')
+
 
 background_image = tk.PhotoImage(file="sky.png")
+
+window.configure(background="white")
+
+
+frame = Label(window, bg='white')
 title = Label(window, image=background_image,highlightthickness=0, bd=0)
+
+
 title.pack()
 
 
 
 
-loadimage = tk.PhotoImage(file="4OKd.gif")
-loadimage2 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
+loadimage = PhotoImage(file="sun_PNG13424.png")
+loadimage2 = tk.PhotoImage(file="imgonline-com-ua-Resize-XnBrlLnBM1tZmn.png").subsample(1,1)#ТИПО РАЗМЕР КАРТИНКИ
 loadimage3 = tk.PhotoImage(file="4OKd.gif")
 loadimage4 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 loadimage5 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
@@ -121,20 +173,20 @@ loadimage9 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 loadimage10 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
 
 
-
 #window.overrideredirect(True)
 #window.geometry("+250+250")
 #window.wm_attributes("-topmost", True)
 #window.wm_attributes("-disabled", True)
-window.wm_attributes("-transparentcolor", "white") # -- фон_белый
+#window.wm_attributes("-transparentcolor", "white") # -- фон_белый
 
 
+#plane = canvas.create_image(450,250,image=loadimage2)
 
 sunbtn =Button(window,
                    image=loadimage,
-#width=25, размеры планеты
-                   command=createearthWindow,bg = "white",
-                   borderwidth=0,bd=0)
+#width=25, #размеры планеты
+                   command=createearthWindow,
+                   borderwidth=1000,bd=0)
 mercurybtn=Button(window,
                    image=loadimage2,
                    command=createmercuryWindow)
@@ -173,6 +225,11 @@ plutobtn=Button(window,
                    command=createplutoWindow)
 
 
+
+
+
+
+
 sunbtn.pack()
 mercurybtn.pack()
 
@@ -189,6 +246,7 @@ neptunebtn.pack()
 plutobtn.pack()
 
 
+'''
 sunbtn.place(x=750, y=350)
 mercurybtn.place(x=500, y=350)
 
@@ -203,8 +261,9 @@ uranusbtn.place(x=200, y=350)
 
 neptunebtn.place(x=150, y=350)
 plutobtn.place(x=100, y=350)
+'''
 
-
+die()
 #while True:
   #  i += 0.1
   #  mercurybtn.place(x=i, y=350)
@@ -213,4 +272,4 @@ plutobtn.place(x=100, y=350)
 # sunbtn = Button(frame, bg='yellow')
 # sunbtn.pack()
 
-window.mainloop()
+#window.mainloop()
