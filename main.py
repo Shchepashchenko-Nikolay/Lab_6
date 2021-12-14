@@ -13,71 +13,97 @@ import tkinter as tk
 def createsunWindow():
     newWindow = Toplevel(window)
 
-    labelExample = Label(newWindow, text="Со́лнце (астр. ☉) — одна из звёзд нашей Галактики (Млечный Путь) "
-                                         "и единственная звезда Солнечной системы. Вокруг Солнца обращаются другие объекты этой системы: планеты и их спутники, карликовые планеты и их спутники, астероиды, метеороиды, кометы и космическая пыль.")
+    labelExample = Label(newWindow, text="Солнце")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample.pack()
 def createmercuryWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="МЕРКУРИЙ\n"
+                         "Большая полуось - 0.38709830982а.е, Эксцентриситет - 0.205631752, Наклон к эклиптике - 7.0049863889, Период обращения - 87,968 суток, наклон оси - 0, орбитальная скорость - 47,87км/c\n"
+                          "Радиус меркурия составляет 2440км, масса - 3,285е23кг температура поверхности колеблется от -190 до +430.\n"
+                          "Атмосфера разреженная, её составляют гелий, натрий, кислород, калий, аргон, водород.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createvenusWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="ВЕНЕРА\n"
+                          "Большая полуось - 0.72332981996а.е, Эксцентриситет - 0.006771882, наклон к эклиптике - 3.3946619444, период образщения - 224,695 суток, наклон оси - 177град., орбитальная скорость - 35,02 км/c\n"
+                          "Радиус - 6051км, масса - 4,867е24кг, средняя температура поверхности - +461.\n"
+                          "Атмосфера - углекислый газ, азот\n")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createearthWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="ЗЕМЛЯ\n"
+                          "Большая полуось - 1а.е., Эксцентриситет - 0.016708617, наклон к эклиптике - 0, период обращения - 365.242 суток, наклон оси - 23,45град, орбитальная скорость - 29,79 км/c\n"
+                          "Радиус - 6 371км, 5,972е24кг, температура от -89,2 до +56,7\n"
+                          "Атмосфера - азот, кислород, углекислый газ, аргон, гелий. \n")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createmarscWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="МАРС\n"
+                          "Большая полуось - 1.52367934191а.е., Эксцентриситет - 0.093400620, наклон к эклиптике - 1.8497263889град,  период обращения - 686.9297 суток, наклон оси - 25,19град, орбитальная скорость - 24,13км/c\n"
+                          "Радиус - 3 389,5км, масса - 6,39е23кг, температура от -153 до +25\n"
+                          "Атмосфера - углекислый газ, кислород, водород.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createjupiterWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="ЮПИТЕР\n"
+                          "Большая полуось - 5.20260319132а.е., Эксцентриситет - 0.048494851, наклон к эклиптике - 1.3032697222, период обращения - 4330.595 суток, наклон оси -  3.13град, орбитальная скорость - 13,06 км/c\n"
+                          "Радиус - 69 911км, масса - 1,898е27кг, температура от -145 до 24000 (в зависимости от близости к ядру). \n"
+                          "Атмосфера - водород, гелий.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createsaturnWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="САТУРН\n"
+                          "Большая полуось - 9.55490959574а.е., Эксцентриситет - 0.055508622, наклон к эклиптике - 2.4888780556, период обращения - 10746.94 суток, наклон оси - 25.33град, орбитальная скорость - 9,66км/c\n"
+                          "Радиус - 58 232км, масса - 5,683E26кг, температура от -175 до 11700 (в зависимости от близости к ядру). \n"
+                          "Атмосфера - водород, гелий, метан, амиак.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createuranusWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="УРАН\n"
+                          "Большая полуось - 19.21844606178а.е., Эксцентриситет - 0.046295899,  наклон к эклиптике - 0.77319611град, период обращения - 30588.740354 суток, наклон оси - 97,86град, орбитальная скорость - 6,8км/c\n"
+                          "Радиус - 25 362км, масса - 8,681E25 кг, температура от -224 до 4737 (в зависимости от близости к ядру).\n"
+                          "Атмосфера - водород, гелий, вода, амиак, метан.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createneptuneWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="НЕПТУН\n"
+                          "Большая полуось - 30.11038686942а.е., Эксцентриситет - 0.008988095, наклон к эклиптике - 1.7699522град, период обращения - 59799.900456 суток, наклон оси - 28,31град, орбитальная скорость - 5,44 км/c\n"
+                          "Радиус - 24 622 км, масса - 1,024E26 кг, температура от -218 до 7000 (в зависимости от близости к ядру).\n"
+                          "Атмосфера - водород, гелий, углеводород, азот, вода, амиак, метан.")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
 def createplutoWindow():
     newWindow = Toplevel(window)
 
-    labelExample2 = Label(newWindow, text="merc very big")
+    labelExample2 = Label(newWindow, text="ПЛУТОН\n"
+                          "Большая полуось - 39.5181761979 а.е., Эксцентриситет - 0.2459387823, наклон к эклиптике - 17.1225991666град, период обращения - 90738.995 суток, наклон оси - 122.52град, орбитальная скорость - 4,74км/c\n"
+                          "Радиус - 1 188,3 км, масса - 1.3 × 10^22кг, температура составляет -229град\n"
+                          "Атмосфера - азот, метан, монооксид углерода")
    # buttonExample = Button(newWindow, text="New Window button")
 
     labelExample2.pack()
@@ -95,32 +121,33 @@ def cat():
         ii = 200 * sin(radians(angle))
         angle += 1
 
+        sunbtn.place(x=840, y=525)
+        mercurybtn.place(x=0.5*i+840, y=0.5*ii+525)
+
+        venusbtn.place(x=0.75*i+840, y=0.75*ii+525)
+        earthbtn.place(x=i+840, y=ii+525)
+
+
+        marsbtn.place(x=1.25*i+840, y=1.25*ii+525)
+        jupiterbtn.place(x=1.5*i+840, y=1.5*ii+525)
+
+        saturnbtn.place(x=1.75*i+840, y=1.75*ii+525)
+        uranusbtn.place(x=2*i+840, y=2*ii+525)
+
+        neptunebtn.place(x=2.25*i+840, y=2.25*ii+525)
+        plutobtn.place(x=2.5*i+840, y=2.5*ii+525)
+        window.update()
+
 
      #   i = math.cosh(x)
      #   ii =math.sinh(x)
 
-        print(i, ii)
-        sunbtn.place(x=i+350, y=ii+350)
-        mercurybtn.place(x=500, y=350)
-
-        venusbtn.place(x=450, y=350)
-        earthbtn.place(x=400, y=350)
-
-
-        marsbtn.place(x=350, y=350)
-        jupiterbtn.place(x=300, y=350)
-
-        saturnbtn.place(x=250, y=350)
-        uranusbtn.place(x=200, y=350)
-
-        neptunebtn.place(x=150, y=350)
-        plutobtn.place(x=100, y=350)
-        window.update()
 
 
 def die(): #она обновляет кооординаты , это mainloop()/ ее замена
     while True:
         cat()
+        #catpl()
         window.update()
 
 
@@ -161,16 +188,16 @@ title.pack()
 
 
 
-loadimage = PhotoImage(file="sun_PNG13424.png")
-loadimage2 = tk.PhotoImage(file="imgonline-com-ua-Resize-XnBrlLnBM1tZmn.png").subsample(1,1)#ТИПО РАЗМЕР КАРТИНКИ
-loadimage3 = tk.PhotoImage(file="4OKd.gif")
-loadimage4 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage5 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage6 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage7 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage8 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage9 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
-loadimage10 = tk.PhotoImage(file="imgonline-com-ua-Resize-Nd7vFQJ5pWqd.png")
+loadimage = PhotoImage(file="sun.png")
+loadimage2 = tk.PhotoImage(file="mercury.png").subsample(1,1)#ТИПО РАЗМЕР КАРТИНКИ
+loadimage3 = tk.PhotoImage(file="venera.png")
+loadimage4 = tk.PhotoImage(file="earth.png")
+loadimage5 = tk.PhotoImage(file="mars.png")
+loadimage6 = tk.PhotoImage(file="jupiter.png")
+loadimage7 = tk.PhotoImage(file="saturn.png")
+loadimage8 = tk.PhotoImage(file="uran.png")
+loadimage9 = tk.PhotoImage(file="neptun.png")
+loadimage10 = tk.PhotoImage(file="pluto.png")
 
 
 #window.overrideredirect(True)
@@ -192,36 +219,36 @@ mercurybtn=Button(window,
                    command=createmercuryWindow)
 
 venusbtn=Button(window,
-               image=loadimage2,
+               image=loadimage3,
                highlightthickness=0,
                bd=0,
-               command=createsunWindow)
+               command=createvenusWindow)
 
 
 earthbtn=tk.Button(window,
-                   image=loadimage2,
+                   image=loadimage4,
 #width=25, размеры планеты
                    command=createearthWindow,bg = "white",
                    borderwidth=0,bd=0)
 
 
 marsbtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage5,
                    command=createmarscWindow)
 jupiterbtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage6,
                    command=createjupiterWindow)
 saturnbtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage7,
                    command=createsaturnWindow)
 uranusbtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage8,
                    command=createuranusWindow)
 neptunebtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage9,
                    command=createneptuneWindow)
 plutobtn=Button(window,
-                   image=loadimage2,
+                   image=loadimage10,
                    command=createplutoWindow)
 
 
