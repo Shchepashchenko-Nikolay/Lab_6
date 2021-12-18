@@ -1,14 +1,24 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
+""" подключение библиотек """
 from math import cos, sin, radians
 from tkinter import *
 import tkinter as tk
 
+"""def create%planet name%window: при вызове функции создается новое окно с информацией о планете"""
+
 
 def createsunwindow():
     newwindow = Toplevel(window)
-    labelexample = Label(newwindow, text="Солнце")
+    labelexample = Label(newwindow, text="Солнце \n"
+                                         "Масса 1,0014 M \n"
+                                         "Период обращения	225—250 млн лет\n"
+                                         "Орбитальная скорость	220—240 км/с \n"
+                                         "Возраст		4,5682±0,0006 млрд лет \n"
+                                         "Температура поверхности 5 778 К \n"
+                                         "В отличие от Земли, у Солнца нет твердой поверхности. Но у него есть"
+                                         " перегретая атмосфера, состоящая из солнечного материала,"
+                                         "связанного со звездой гравитацией и магнитными силами")
     labelexample.pack()
 
 
@@ -130,6 +140,8 @@ def createplutowindow():
 
 
 def planetspeed(x):
+    """x- переменная содержащая 1 из 2 значении,если условия up/down, то скорость планет speedplanet
+    повышается/понижается на 0.25. функция вызывается нажатим кнопок speedplanet/speeddown"""
     global speedplanet
     if x == 'up':
         speedplanet += 0.25
@@ -138,6 +150,12 @@ def planetspeed(x):
 
 
 def speed():
+    """angle(0-8)  - переменная отвечающая за скорость движения по окружности, является градусом синуса и косинуса
+     i(0-8),ii(0-8)-переменнные координаты отвечающие за нахождение планеты на холсте от скорости angel
+           и формулы окружности.
+    %button%.place(x,y) -задает координаты кнопки  на холсте
+    скорость планет зависит от самой быстрой-Меркурия
+    """
     angle = 0
     angle1 = 0
     angle2 = 0
@@ -209,22 +227,16 @@ def speed():
         speedup.place(x=1400, y=800)
         speeddown.place(x=1400, y=850)
         sunbtn.place(x=840, y=525)
-        mercurybtn.place(x=0.4 * i + 840, y=0.4 * ii + 525)
-        venusbtn.place(x=0.75 * i1 + 840, y=0.75 * ii1 + 525)
-        earthbtn.place(x=i2 + 840, y=ii2 + 525)
-        marsbtn.place(x=1.25 * i3 + 840, y=1.25 * ii3 + 525)
+        mercurybtn.place(x=0.3 * i + 840, y=0.3 * ii + 525)
+        venusbtn.place(x=0.55 * i1 + 840, y=0.55 * ii1 + 525)
+        earthbtn.place(x=i2*0.9 + 840, y=ii2*0.9 + 525)
+        marsbtn.place(x=1.2 * i3 + 840, y=1.2 * ii3 + 525)
         jupiterbtn.place(x=1.5 * i4 + 840, y=1.5 * ii4 + 525)
-        saturnbtn.place(x=1.75 * i5 + 840, y=1.75 * ii5 + 525)
-        uranusbtn.place(x=2 * i6 + 840, y=2 * ii6 + 525)
-        neptunebtn.place(x=2.25 * i7 + 840, y=2.25 * ii7 + 525)
-        plutobtn.place(x=2.5 * i8 + 840, y=2.5 * ii8 + 525)
+        saturnbtn.place(x=1.9 * i5 + 840, y=1.9 * ii5 + 525)
+        uranusbtn.place(x=2.3 * i6 + 840, y=2.3 * ii6 + 525)
+        neptunebtn.place(x=2.6 * i7 + 840, y=2.6 * ii7 + 525)
+        plutobtn.place(x=2.9 * i8 + 840, y=2.9 * ii8 + 525)
 
-        window.update()
-
-
-def mainloop():  # она обновляет кооординаты , это mainloop()/ ее замена
-    while True:
-        speed()
         window.update()
 
 
@@ -232,21 +244,14 @@ window = Tk()  # создание окна
 window.title('lab6')  # name of programm
 
 # Указываем размеры окна
-
 window.geometry('1610x1050')
-
 # Делаем невозможным менять размеры окна
-
 window.resizable(width=False, height=False)
-
-background_image = tk.PhotoImage(file='sky.png')
-
+background_image = tk.PhotoImage(file='skyn.png').subsample(2, 2)
 window.configure(background='white')
-
 frame = Label(window, bg='white')
 title = Label(window, image=background_image, highlightthickness=0,
               bd=0)
-
 title.pack()
 
 loadimage = PhotoImage(file='sun.png').subsample(2, 2)
@@ -263,39 +268,39 @@ loadimage10 = tk.PhotoImage(file='pluto.png').subsample(2, 2)
 speedplanet = 1
 
 sunbtn = Button(window, image=loadimage, command=createsunwindow,
-                borderwidth=0, bg="#333")
+                borderwidth=0, bg="black")
 mercurybtn = Button(window, image=loadimage2, width=25,
-                    command=createmercurywindow, bg="#333")
+                    command=createmercurywindow, bg="black")
 
 venusbtn = Button(
     window,
     image=loadimage3,
     highlightthickness=0,
-    command=createvenuswindow, bg="#333"
+    command=createvenuswindow, bg="black"
 )
 
 earthbtn = tk.Button(
     window,
     image=loadimage4,
-    command=createearthwindow, bg="#333"
+    command=createearthwindow, bg="black"
 )
 
-marsbtn = Button(window, image=loadimage5, command=createmarscwindow, bg="#333")
+marsbtn = Button(window, image=loadimage5, command=createmarscwindow, bg="black")
 jupiterbtn = Button(window, image=loadimage6,
-                    command=createjupiterwindow, bg="#333")
-saturnbtn = Button(window, image=loadimage7, command=createsaturnwindow, bg="#333")
-uranusbtn = Button(window, image=loadimage8, command=createuranuswindow, bg="#333")
+                    command=createjupiterwindow, bg="black")
+saturnbtn = Button(window, image=loadimage7, command=createsaturnwindow, bg="black")
+uranusbtn = Button(window, image=loadimage8, command=createuranuswindow, bg="black")
 neptunebtn = Button(window, image=loadimage9,
-                    command=createneptunewindow, bg="#333")
-plutobtn = Button(window, image=loadimage10, command=createplutowindow, bg="#333")
+                    command=createneptunewindow, bg="black")
+plutobtn = Button(window, image=loadimage10, command=createplutowindow, bg="black")
 
 speedup = Button(window, text="Увеличить скорость",
-                 command=lambda x='up': planetspeed(x))
+                 command=lambda x='up': planetspeed(x), fg="#eee", bg="#333")
 
 speeddown = Button(window, text="Уменьшить скорость",
-                   command=lambda x='down': planetspeed(x))
+                   command=lambda x='down': planetspeed(x), fg="#eee", bg="#333")
 
-informationaboutspeed = Label(window, text="Базовая скорость планет 47.87" + "км/сек\n множитель +-0.25",
+informationaboutspeed = Label(window, text="Базовая скорость планет 47.87 км/сек\n кнопки скорости +-0.25%",
                               fg="#eee", bg="#333")
 
 informationaboutspeed.pack()
@@ -311,5 +316,4 @@ saturnbtn.pack()
 uranusbtn.pack()
 neptunebtn.pack()
 plutobtn.pack()
-
-mainloop()
+speed()
