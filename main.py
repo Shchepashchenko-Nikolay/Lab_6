@@ -247,7 +247,9 @@ window.title('lab6')  # name of programm
 window.geometry('1610x1050')
 # Делаем невозможным менять размеры окна
 window.resizable(width=False, height=False)
-background_image = tk.PhotoImage(file='skyn.png').subsample(2, 2)
+
+background_image = tk.PhotoImage(file='sky.png')
+
 window.configure(background='white')
 frame = Label(window, bg='white')
 title = Label(window, image=background_image, highlightthickness=0,
